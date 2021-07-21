@@ -69,10 +69,10 @@ const Home = ({ service, post }) => {
       <div className="font-body">
         {/* <Team />
         <About /> */}
-        <div className=" p-4 container mx-auto font-body">
+        <div className=" p-4 container mx-auto font-body py-4">
           <div className="mt-4  container mx-auto ">
-            <h1 className="flex justify-left text-3xl font-lake  sm:text-4xl ">
-              Latest Releases
+            <h1 className="flex justify-left text-4xl font-lake  sm:text-4xl ">
+              Latest Releases...
             </h1>
             <hr className="mt-4" />
 
@@ -88,9 +88,9 @@ const Home = ({ service, post }) => {
 
           <div>
             <div>
-              <div className="  container mx-auto ">
-                <h1 className="flex justify-end text-3xl  font-lake  sm:text-4xl ">
-                  Our Artists
+              <div className="  container mx-auto py-4 ">
+                <h1 className="flex justify-end text-3xl  font-lake  sm:text-4xl  ">
+                  Our Artists...
                 </h1>
                 <hr className="mt-4" />
               </div>
@@ -104,12 +104,23 @@ const Home = ({ service, post }) => {
                   ))}
               </div>
             </div>
+            <div className="  container mx-auto py-4">
+              <h1 className="flex justify-start text-3xl  font-lake  sm:text-4xl ">
+                News...
+              </h1>
+              <hr className="mt-4" />
+              <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+                {postData &&
+                  postData.map((post, index) => (
+                    <div>
+                      <Post key={post.id} post={post} />
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* <SeenIn />
-      <Info /> */}
     </Layout>
   );
 };

@@ -47,7 +47,7 @@ const navigation = {
 
 export default function Example() {
   return (
-    <footer className="bg-gray-900 font-body">
+    <footer className="bg-white font-body">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
@@ -57,7 +57,7 @@ export default function Example() {
             <div key={item.name} className="px-5 py-2 uppercase font-semibold ">
               <a
                 href={item.href}
-                className="font-base text-gray-300 hover:text-gray-100 tracking-widest"
+                className="font-base text-gray-900 hover:text-gray-500 tracking-widest"
               >
                 {item.name}
               </a>
@@ -69,7 +69,7 @@ export default function Example() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-100"
+              className="text-gray-900 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -81,9 +81,16 @@ export default function Example() {
         <p className="mt-8 text-center text-sm font-lighter text-gray-600 uppercase">
           2021 Let Go Records LTD. All rights reserved.
         </p>
+        <div className=" flex justify-center mt-4 ">
+          <img
+            className=" h-10 w-auto animate-pulse"
+            src="/images/logoII.png"
+            alt=""
+          />
+        </div>
 
         <a href=""></a>
-        <p className="mt-4 text-center text-xs font-bold text-gray-200 uppercase tracking-widest ">
+        <p className="mt-4 text-center text-xs font-bold text-gray-500 uppercase tracking-widest ">
           Web Dev By: <a href="https://vuhze.com">VUHZE Tech</a>
         </p>
       </div>

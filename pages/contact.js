@@ -167,7 +167,7 @@ const contact = () => {
           </div>
         </div>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

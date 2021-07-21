@@ -52,7 +52,7 @@ const service = ({ service }) => {
             ))}
         </div>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

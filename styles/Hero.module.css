@@ -2,7 +2,7 @@
   background: url("/images/hero.webp") no-repeat center center fixed;
   background-size: cover;
   margin: auto;
-  height: 70vh;
+  height: 30vh;
   background-attachment: fixed;
   color: #ffffff;
   position: relative;
@@ -20,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000d0;
+  background-color: #0000000a;
 }
 
 @media (max-width: 960px) {
@@ -32,6 +32,7 @@
     background-attachment: fixed;
     color: #ffffff;
     position: relative;
+    font-size: 60px;
   }
 
   .herohome::after {
