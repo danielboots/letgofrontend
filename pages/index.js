@@ -10,6 +10,7 @@ import About from "@/components/About";
 import SeenIn from "@/components/SeenIn";
 import Team from "@/components/Team";
 import Post from "@/components/Post";
+import Carousel from "@/components/Carousel";
 
 const Home = ({ service, post }) => {
   const [serviceData, setServiceData] = useState(null);
@@ -76,6 +77,7 @@ const Home = ({ service, post }) => {
             </h1>
             <hr className="mt-4" />
 
+            <Carousel />
             <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
               {serviceData &&
                 serviceData.map((service, index) => (
