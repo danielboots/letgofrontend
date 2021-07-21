@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <div>
       <div className={styles.herohome}>
-        <h1 className=" font-body text-center font-bold z-20 tracking-tight text-3xl  sm:text-4xl md:text-6xl ">
-          EDM Music Services
+        <h1 className=" font-lake text-center  z-20 animate-pulse   ">
+          Let Go Records
         </h1>
       </div>
     </div>

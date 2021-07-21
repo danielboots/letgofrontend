@@ -12,7 +12,7 @@ const Post = ({
   author,
 }) => {
   return (
-    <Layout title="About | EDM" description="About| EDM Music posts">
+    <Layout title="About | EDM" description="About| Let Go Records posts">
       <div>
         <main>
           <article className="font-body  shadow-lg mx-auto ">

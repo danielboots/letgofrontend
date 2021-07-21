@@ -5,7 +5,7 @@ import Info from "../components/Info";
 
 const contact = () => {
   return (
-    <Layout title="contact | EDM" description="contact| EDM Music Services">
+    <Layout title="contact | EDM" description="contact| Let Go Records">
       <div className="relative bg-white font-body">
         <div className="absolute inset-0">
           <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50" />
@@ -47,7 +47,7 @@ const contact = () => {
                       className="flex-shrink-0 h-6 w-6 text-gray-400"
                       aria-hidden="true"
                     />
-                    <span className="ml-3">contact@edmmusicservice.com</span>
+                    <span className="ml-3">contact@letgo.com</span>
                   </dd>
                 </div>
               </dl>
@@ -70,7 +70,7 @@ const contact = () => {
                 <input
                   type="hidden"
                   name="_subject"
-                  value="New submission from EDM Music Services!"
+                  value="New submission from Let Go Records!"
                 ></input>
                 <div>
                   <label htmlFor="full-name" className="sr-only">

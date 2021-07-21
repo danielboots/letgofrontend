@@ -67,13 +67,14 @@ const Home = ({ service, post }) => {
   return (
     <Layout>
       <div className="font-body">
-        <Team />
-        <About />
+        {/* <Team />
+        <About /> */}
         <div className=" p-4 container mx-auto font-body">
           <div className="mt-4  container mx-auto ">
-            <h1 className="flex justify-center text-3xl font-extrabold tracking-tight sm:text-4xl ">
-              Our Top Services
+            <h1 className="flex justify-left text-3xl font-lake  sm:text-4xl ">
+              Latest Releases
             </h1>
+            <hr className="mt-4" />
 
             <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
               {serviceData &&
@@ -88,9 +89,10 @@ const Home = ({ service, post }) => {
           <div>
             <div>
               <div className="  container mx-auto ">
-                <h1 className="flex justify-center text-3xl font-extrabold tracking-tight sm:text-4xl">
-                  Latest News
+                <h1 className="flex justify-end text-3xl  font-lake  sm:text-4xl ">
+                  Our Artists
                 </h1>
+                <hr className="mt-4" />
               </div>
 
               <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
@@ -106,8 +108,8 @@ const Home = ({ service, post }) => {
         </div>
       </div>
 
-      <SeenIn />
-      <Info />
+      {/* <SeenIn />
+      <Info /> */}
     </Layout>
   );
 };

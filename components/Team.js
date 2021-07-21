@@ -17,7 +17,7 @@
 const people = [
   {
     name: "Vince",
-    role: "Founder EDM Music Services",
+    role: "Founder Let Go Records",
     imageUrl:
       "https://images.unsplash.com/photo-1511222138462-5d03818b409c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1932&q=80",
     bio: "Our team have over 15+ years of industry experience connecting industry players and getting major record label placements and results.",
@@ -38,7 +38,7 @@ export default function Team() {
             </h2>
 
             <p className="text-lg text-gray-500 font-semibold">
-              EDM Music Productions dedicated team of music professionals
+              Let Go Records Productions dedicated team of music professionals
               curated by us to ensure we maintain the highest quality of results
               and work. From music producers to A&R, we can handle your project
               from start to finish.

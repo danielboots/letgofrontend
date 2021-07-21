@@ -18,7 +18,7 @@ export default function Header() {
         <>
           <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
             <div className="flex justify-between  relative">
-              <ul className=" h-8 w-8  animate-pulse ">
+              <ul className=" h-10 w-10  ">
                 <Link href="/">
                   <img src="/images/logoI.png" alt="" />
                 </Link>
@@ -26,12 +26,12 @@ export default function Header() {
 
               {/* hides content on small screens */}
               <div className="hidden sm:ml-6 sm:block">
-                <ul className="  uppercase space-x-8  font-body  font-bold tracking-widest text-gray-600  mr-6">
+                <ul className="  uppercase space-x-8   font-bold tracking-widest text-gray-900  mr-6 font-body">
                   <Link href="/">
-                    <a className="hover:text-gray-800">Index</a>
+                    <a className="hover:text-gray-800 ">Releases</a>
                   </Link>
                   <Link href="/service">
-                    <a className="hover:text-gray-800">Services</a>
+                    <a className="hover:text-gray-800">Artists</a>
                   </Link>
                   <Link href="/Post">
                     <a className="hover:text-gray-800">News</a>

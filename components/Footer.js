@@ -57,7 +57,7 @@ export default function Example() {
             <div key={item.name} className="px-5 py-2 uppercase font-semibold ">
               <a
                 href={item.href}
-                className="font-base text-gray-500 hover:text-gray-100 tracking-widest"
+                className="font-base text-gray-300 hover:text-gray-100 tracking-widest"
               >
                 {item.name}
               </a>
@@ -79,7 +79,7 @@ export default function Example() {
         <div className="border-b border-gray-600 border-opacity-50 w-50 "></div>
 
         <p className="mt-8 text-center text-sm font-lighter text-gray-600 uppercase">
-          2021 EDM Music Services LTD. All rights reserved.
+          2021 Let Go Records LTD. All rights reserved.
         </p>
 
         <a href=""></a>

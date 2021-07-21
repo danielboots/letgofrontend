@@ -11,16 +11,16 @@ const Info = () => {
       <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
           <h2 className="text-base font-thin uppercase tracking-wider text-gray-600">
-            About EDM Music Services
+            About Let Go Records
           </h2>
           <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
             Fast Forward your music career
           </p>
           <p className="mt-3 text-lg text-gray-300">
-            EDM Music Productions dedicated team of music professionals curated
-            by us to ensure we maintain the highest quality of results and work.
-            From music producers to A&R, we can handle your project from start
-            to finish.
+            Let Go Records Productions dedicated team of music professionals
+            curated by us to ensure we maintain the highest quality of results
+            and work. From music producers to A&R, we can handle your project
+            from start to finish.
           </p>
         </div>
       </div>
