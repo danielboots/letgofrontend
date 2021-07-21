@@ -1,21 +1,44 @@
-import Link from "next/link";
 import { sanityClient, urlFor } from "../sanity";
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
-import Info from "../components/Info";
-import BlockContent from "@sanity/block-content-to-react";
-import Service from "@/components/Service";
-import About from "@/components/About";
-import SeenIn from "@/components/SeenIn";
-import Team from "@/components/Team";
 import Post from "@/components/Post";
 import Carousel from "@/components/Carousel";
+import Release from "@/components/Release";
 
-const Home = ({ service, post }) => {
+const Home = ({}) => {
   const [serviceData, setServiceData] = useState(null);
   const [postData, setPost] = useState(null);
+  const [releaseData, setRelease] = useState(null);
   console.log(serviceData);
+  console.log(releaseData);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == 'release' ][0..2]{
+        headline,
+        name,
+        slug,
+        
+        
+        releasedate,
+        spotifyembed,
+        youtubeembed,
+        beatport,
+        featured, 
+        image {
+          asset-> {
+              _id,
+              url,
+          },
+          alt,
+      },
+
+    }`
+      )
+      .then((data) => setRelease(data))
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     sanityClient
@@ -32,8 +55,7 @@ const Home = ({ service, post }) => {
           },
           alt,
       },
-      
-
+    
 
         description,
         tags,
@@ -78,11 +100,11 @@ const Home = ({ service, post }) => {
             <hr className="mt-4" />
 
             <Carousel />
-            <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
-              {serviceData &&
-                serviceData.map((service, index) => (
+            <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+              {releaseData &&
+                releaseData.map((release) => (
                   <div>
-                    <Service key={service.id} service={service} />
+                    <Release key={release.id} release={release} />
                   </div>
                 ))}
             </div>
@@ -99,7 +121,7 @@ const Home = ({ service, post }) => {
 
               <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                 {postData &&
-                  postData.map((post, index) => (
+                  postData.map((post) => (
                     <div>
                       <Post key={post.id} post={post} />
                     </div>
@@ -113,7 +135,7 @@ const Home = ({ service, post }) => {
               <hr className="mt-4" />
               <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                 {postData &&
-                  postData.map((post, index) => (
+                  postData.map((post) => (
                     <div>
                       <Post key={post.id} post={post} />
                     </div>
