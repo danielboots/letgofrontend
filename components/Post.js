@@ -29,7 +29,7 @@ const Post = ({ post }) => {
             <Link href={`post/${post.slug.current}`}>
               <button
                 type="button"
-                className=" m-3 py-3 px-4  uppercase  text-xs  rounded-sm font-bold  text-white bg-gray-900 hover:bg-gray-800 justify-end"
+                className=" m-3 py-3 px-4  uppercase  text-xs  rounded-sm font-bold  text-white bg-indigo-800 hover:g-indigo-600 justify-end"
               >
                 Read Article...
               </button>

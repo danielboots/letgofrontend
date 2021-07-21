@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, BellIcon } from "@heroicons/react/outline";
+
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <Disclosure
       as="nav"
-      className=" py-8 text-gray-700 tracking-tight  bg-white   sticky top-0 z-50 h-20 "
+      className=" py-8 text-gray-700 tracking-tight  bg-white sticky top-0 z-50 h-20 "
     >
       {({ open }) => (
         <>
@@ -20,7 +20,7 @@ export default function Header() {
             <div className="flex justify-between  relative">
               <ul className=" h-8 w-20  ">
                 <Link href="/">
-                  <img src="/images/logoII.png" alt="" />
+                  <img src="/images/logocolor.png" alt="" />
                 </Link>
               </ul>
 
@@ -57,7 +57,7 @@ export default function Header() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <ul className="  px-4 pt-6 pb-4 space-y-6 flex uppercase  font-body bg-gray-900 w-full  font-bold tracking-widest text-gray-200 flex-col">
+            <ul className="  px-4 pt-6 pb-4 space-y-6 flex uppercase  font-body bg-white w-full  font-bold tracking-widest text-gray-900 flex-col">
               <Link href="/">
                 <a>Index</a>
               </Link>

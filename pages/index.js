@@ -20,7 +20,7 @@ const Home = ({}) => {
         name,
         slug,
         
-        
+       
         releasedate,
         spotifyembed,
         youtubeembed,

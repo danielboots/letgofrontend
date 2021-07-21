@@ -69,7 +69,7 @@ export default function Example() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-900 hover:text-gray-500"
+              className="text-indigo-800 hover:text-indigo-600"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -84,7 +84,7 @@ export default function Example() {
         <div className=" flex justify-center mt-4 ">
           <img
             className=" h-10 w-auto animate-pulse"
-            src="/images/logoII.png"
+            src="/images/logocolor.png"
             alt=""
           />
         </div>
