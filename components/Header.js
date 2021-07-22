@@ -33,6 +33,9 @@ export default function Header() {
                   <Link href="/artist">
                     <a className="hover:text-gray-800 ">Artists</a>
                   </Link>
+                  <Link href="/event">
+                    <a className="hover:text-gray-800 ">Events</a>
+                  </Link>
                   <Link href="/service">
                     <a className="hover:text-gray-800">Services</a>
                   </Link>
@@ -66,6 +69,9 @@ export default function Header() {
               </Link>
               <Link href="/artist">
                 <a className="hover:text-gray-800 ">Artists</a>
+              </Link>
+              <Link href="/event">
+                <a className="hover:text-gray-800 ">Events</a>
               </Link>
               <Link href="/service">
                 <a>Services</a>
