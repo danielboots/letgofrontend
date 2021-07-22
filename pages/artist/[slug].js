@@ -1,43 +1,48 @@
 import { sanityClient, urlFor } from "../../sanity";
 import Layout from "@/components/Layout";
-import Link from "next/link";
+import BlockContent from "@sanity/block-content-to-react";
 
-const Service = ({
-  title,
-  slug,
-  tagline,
-  id,
-  mainImage,
-  description,
-  tags,
-}) => {
+const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
   return (
-    <Layout title="About | EDM" description="About| Let Go Records">
+    <Layout title={`Artist : ${name}`} description="About| Let Go Records">
       <div>
         <main>
+          <div>
+            {/* Main container div */}
+            <div
+              style={{
+                backgroundImage: `url(${image.asset.url})`,
+              }}
+              className=" bg-center bg-cover bg-no-repeat m-auto bg-fixed relative h-40v flex justify-center items-center flex-col "
+            >
+              <div className="absolute h-full w-full flex overflow-x-auto bg-coolgray-900 bg-opacity-50 backdrop-filter  "></div>
+              <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl ">
+                {name}
+              </h1>
+            </div>
+          </div>
+
           <article className="font-body  shadow-lg mx-auto ">
             <header className="">
               <div className=" h-full w-full flex items-center justify-center p-8">
                 <div className="bg-white rounded p-6">
                   <h1 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
-                    {title}
+                    {name}
                   </h1>
+
                   <div>
-                    <img
-                      className="w-full h-32 sm:h-48 object-cover  shadow-lg  hover:shadow-2xl transition duration-300 ease-in-out relative border-1"
-                      src={mainImage.asset.url}
-                      alt="alt tag"
-                    />
+                    <p className="text-justify">{name}</p>
+                    <p>{tagline}</p>
+                    <p>{spotifyembed}</p>
+                    <p>{youtubeembed}</p>
+                    <div className="prose  text-center my-10 ">
+                      <BlockContent
+                        blocks={bio}
+                        projectId="ta2muy7p"
+                        dataset="production"
+                      />
+                    </div>
                   </div>
-                  <div className="prose  text-center my-10 ">{description}</div>
-                  <Link href="/contact">
-                    <button
-                      type="button"
-                      className=" m-3 py-3 px-4  uppercase  text-xs  rounded-sm font-bold  text-white bg-gray-900 hover:bg-gray-800 justify-end"
-                    >
-                      Enquire ...
-                    </button>
-                  </Link>
                 </div>
               </div>
             </header>
@@ -52,29 +57,25 @@ export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
   console.log(pageSlug);
 
-  const query = `*[_type == 'service' && slug.current == $pageSlug][0]{
-    title,
-    slug,
+  const query = `*[_type == 'artist' && slug.current == $pageSlug][0]{
     tagline,
-    id,
-    mainImage {
+    name,
+    bio,
+    spotifyembed,
+    youtubeembed,
+    
+    image {
       asset-> {
           _id,
           url,
       },
       alt,
   },
-  
-
-
-    description,
-    tags,
-
 }`;
 
-  const service = await sanityClient.fetch(query, { pageSlug });
+  const artist = await sanityClient.fetch(query, { pageSlug });
 
-  if (!service) {
+  if (!artist) {
     return {
       props: null,
       notFound: true,
@@ -82,16 +83,16 @@ export const getServerSideProps = async (pageContext) => {
   } else {
     return {
       props: {
-        title: service.title,
-        slug: service.slug,
-        tagline: service.tagline,
-        id: service.id,
-        mainImage: service.mainImage,
-        description: service.description,
-        tags: service.tags,
+        name: artist.name,
+        name: artist.name,
+        bio: artist.bio,
+        tagline: artist.tagline,
+        spotifyembed: artist.spotifyembed,
+        youtubeembed: artist.youtubeembed,
+        image: artist.image,
       },
     };
   }
 };
 
-export default Service;
+export default Artist;
