@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "./Header";
 import Footer from "./Footer";
-import Hero from "./Hero";
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();
@@ -16,7 +15,6 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
       {/* <Header /> */}
       <Header />
-      <Hero />
 
       {/* children_wraps content */}
 

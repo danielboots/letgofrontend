@@ -49,8 +49,9 @@ export default function Example() {
   return (
     <footer className="bg-white font-body">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <div className="border-b border-gray-600 border-opacity-50 w-50  my-4"></div>
         <nav
-          className="-mx-5 -my-2 flex flex-wrap justify-center"
+          className="-mx-5 my-2 flex flex-wrap justify-center mt-8"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -76,7 +77,6 @@ export default function Example() {
             </a>
           ))}
         </div>
-        <div className="border-b border-gray-600 border-opacity-50 w-50 "></div>
 
         <p className="mt-8 text-center text-sm font-lighter text-gray-600 uppercase">
           2021 Let Go Records LTD. All rights reserved.

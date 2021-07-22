@@ -27,13 +27,13 @@ export default function Header() {
               {/* hides content on small screens */}
               <div className="hidden sm:ml-6 sm:block">
                 <ul className="  uppercase space-x-8   font-bold tracking-widest text-gray-900  mr-6 font-body">
-                  <Link href="/">
+                  <Link href="/release">
                     <a className="hover:text-gray-800 ">Releases</a>
                   </Link>
-                  <Link href="/service">
+                  <Link href="/artists">
                     <a className="hover:text-gray-800">Artists</a>
                   </Link>
-                  <Link href="/Post">
+                  <Link href="/post">
                     <a className="hover:text-gray-800">News</a>
                   </Link>
                   <Link href="/contact">
@@ -64,7 +64,7 @@ export default function Header() {
               <Link href="/service">
                 <a>Services</a>
               </Link>
-              <Link href="/Post">
+              <Link href="/post">
                 <a>News</a>
               </Link>
               <Link href="/contact">

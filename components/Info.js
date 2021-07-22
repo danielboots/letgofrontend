@@ -1,10 +1,10 @@
 const Info = () => {
   return (
-    <div className="relative bg-gray-900 font-body ">
+    <div className="relative bg-gray-800 font-body ">
       <div className="h-56  sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover "
-          src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+          src="/images/head3.webp"
           alt=""
         />
       </div>
@@ -14,13 +14,13 @@ const Info = () => {
             About Let Go Records
           </h2>
           <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Fast Forward your music career
+            For the love of Music
           </p>
           <p className="mt-3 text-lg text-gray-300">
-            Let Go Records Productions dedicated team of music professionals
-            curated by us to ensure we maintain the highest quality of results
-            and work. From music producers to A&R, we can handle your project
-            from start to finish.
+            Let Go Records - Our philosophy is to only release quality music
+            from artists who are pushing boundaries in the music industry! We
+            love to hear from you so if you think you fit this criteria, we want
+            you to get intouch!
           </p>
         </div>
       </div>

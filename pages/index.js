@@ -69,7 +69,7 @@ const Home = ({}) => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == 'post']{
+        `*[_type == 'post'][0..1]{
         title,
         slug,
         body,
@@ -90,8 +90,7 @@ const Home = ({}) => {
   return (
     <Layout>
       <div className="font-body">
-        {/* <Team />
-        <About /> */}
+        {/* <Hero /> */}
         <div className=" p-4 container mx-auto font-body py-4">
           <div className="mt-4  container mx-auto ">
             <h1 className="flex justify-left text-4xl font-lake  sm:text-4xl ">
@@ -119,14 +118,14 @@ const Home = ({}) => {
                 <hr className="mt-4" />
               </div>
 
-              <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+              {/* <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                 {postData &&
                   postData.map((post) => (
                     <div>
                       <Post key={post.id} post={post} />
                     </div>
                   ))}
-              </div>
+              </div> */}
             </div>
             <div className="  container mx-auto py-4">
               <h1 className="flex justify-start text-3xl  font-lake  sm:text-4xl ">
