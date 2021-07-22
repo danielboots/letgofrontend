@@ -30,8 +30,11 @@ export default function Header() {
                   <Link href="/release">
                     <a className="hover:text-gray-800 ">Releases</a>
                   </Link>
-                  <Link href="/artists">
-                    <a className="hover:text-gray-800">Artists</a>
+                  <Link href="/artist">
+                    <a className="hover:text-gray-800 ">Artists</a>
+                  </Link>
+                  <Link href="/service">
+                    <a className="hover:text-gray-800">Services</a>
                   </Link>
                   <Link href="/post">
                     <a className="hover:text-gray-800">News</a>
@@ -60,6 +63,9 @@ export default function Header() {
             <ul className="  px-4 pt-6 pb-4 space-y-6 flex uppercase  font-body bg-white w-full  font-bold tracking-widest text-gray-900 flex-col">
               <Link href="/">
                 <a>Index</a>
+              </Link>
+              <Link href="/artist">
+                <a className="hover:text-gray-800 ">Artists</a>
               </Link>
               <Link href="/service">
                 <a>Services</a>
