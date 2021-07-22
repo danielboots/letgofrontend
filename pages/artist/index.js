@@ -4,23 +4,24 @@ import Layout from "@/components/Layout";
 import Artist from "@/components/Artist";
 
 const artist = ({ artist }) => {
-  const [artistData, setartistData] = useState(null);
+  const [artistData, setArtist] = useState(null);
 
   console.log(artistData);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == 'artist']{
-        name
+        `*[_type == 'artist' ][0..2]{
+     tagline,
+        name,
         slug,
         
-        tagline,
+       
+        
         spotifyembed,
         youtubeembed,
-        instagram,
         
-        id,
+        featured, 
         image {
           asset-> {
               _id,
@@ -29,10 +30,9 @@ const artist = ({ artist }) => {
           alt,
       },
 
-
     }`
       )
-      .then((data) => setartistData(data))
+      .then((data) => setArtist(data))
       .catch(console.error);
   }, []);
 
