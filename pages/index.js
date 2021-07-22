@@ -4,13 +4,16 @@ import Layout from "../components/Layout";
 import Post from "@/components/Post";
 import Carousel from "@/components/Carousel";
 import Release from "@/components/Release";
+import Artist from "@/components/Artist";
 
 const Home = ({}) => {
   const [serviceData, setServiceData] = useState(null);
   const [postData, setPost] = useState(null);
+  const [artistData, setArtist] = useState(null);
   const [releaseData, setRelease] = useState(null);
   console.log(serviceData);
   console.log(releaseData);
+  console.log(artistData);
 
   useEffect(() => {
     sanityClient
@@ -37,6 +40,34 @@ const Home = ({}) => {
     }`
       )
       .then((data) => setRelease(data))
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == 'artist' ][0..2]{
+     tagline,
+        name,
+        slug,
+        
+       
+        
+        spotifyembed,
+        youtubeembed,
+        
+        featured, 
+        image {
+          asset-> {
+              _id,
+              url,
+          },
+          alt,
+      },
+
+    }`
+      )
+      .then((data) => setArtist(data))
       .catch(console.error);
   }, []);
 
@@ -118,15 +149,16 @@ const Home = ({}) => {
                 <hr className="mt-4" />
               </div>
 
-              {/* <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
-                {postData &&
-                  postData.map((post) => (
+              <div className=" my-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+                {artistData &&
+                  artistData.map((artist) => (
                     <div>
-                      <Post key={post.id} post={post} />
+                      <Artist key={artist.id} artist={artist} />
                     </div>
                   ))}
-              </div> */}
+              </div>
             </div>
+
             <div className="  container mx-auto py-4">
               <h1 className="flex justify-start text-3xl  font-lake  sm:text-4xl ">
                 News...
@@ -149,3 +181,11 @@ const Home = ({}) => {
 };
 
 export default Home;
+
+//       id,
+//       image {
+//         asset-> {
+//             _id,
+//             url,
+//         },
+//         alt,

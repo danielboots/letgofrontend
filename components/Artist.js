@@ -1,6 +1,6 @@
 import Link from "next/link";
-// import { sanityClient, urlFor } from "../sanity";
-// import React, { useState, useEffect } from "react";
+import { sanityClient, urlFor } from "../sanity";
+import React, { useState, useEffect } from "react";
 
 const Artist = ({ artist }) => {
   return (
@@ -14,7 +14,7 @@ const Artist = ({ artist }) => {
           <p className="text-center font-medium text-gray-600 "></p>
           <img
             className="w-full h-16 sm:h-32 object-cover"
-            src={artist.mainImage.asset.url}
+            src={artist.image.asset.url}
             alt="meh"
           />
           <div className="m-4 text-center">

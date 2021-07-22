@@ -14,7 +14,7 @@ const artist = ({ artist }) => {
         `*[_type == 'artist']{
         name
         slug,
-        // bio (block content need sanity package)
+        
         tagline,
         spotifyembed,
         youtubeembed,
@@ -28,11 +28,7 @@ const artist = ({ artist }) => {
           },
           alt,
       },
-      
 
-
-        description,
-        tags,
 
     }`
       )
@@ -51,7 +47,7 @@ const artist = ({ artist }) => {
           {artistData &&
             artistData.map((artist) => (
               <div>
-                <Artist key={artist.id} artist={artist} />
+                <Artist key={artist.slug} artist={artist} />
               </div>
             ))}
         </div>
