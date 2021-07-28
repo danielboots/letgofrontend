@@ -30,7 +30,7 @@ const Single = ({
               <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl ">
                 {name}
               </h1>
-              <h2 className="text-xl p-4 mb-4 flex justify-center  font-semibold text-white  uppercase">
+              <h2 className="text-xl p-4 m-4 flex justify-center  font-semibold text-white  uppercase">
                 {headline}
               </h2>
             </div>
@@ -42,8 +42,8 @@ const Single = ({
         <header className="">
           <div className=" h-full w-full flex items-center justify-center p-8"></div>
         </header>
-        <div className="container mx-auto py-4 mb-4">
-          <div className="mb-4">
+        <div className="container mx-auto ">
+          <div className="p-2">
             <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
               Release Writeup
             </h2>
@@ -51,12 +51,12 @@ const Single = ({
 
             <p className="leading-relaxed text-lg">{writeup}</p>
           </div>
-          <div className="mb-4">
+          <div className="p-2">
             <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
               Media
             </h2>
           </div>
-          <div className=" mt-4">
+          <div className="p-2 ">
             <iframe
               src={spotifyembed}
               name="spotify"
@@ -65,19 +65,18 @@ const Single = ({
               height="300"
             ></iframe>
           </div>
-          <div className="">
-            <div className="my-4">
-              <iframe
-                id="youtube-embed"
-                name="youtubeIFrame"
-                width="100%"
-                height="315"
-                src={youtubeembed}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+
+          <div className="p-2">
+            <iframe
+              id="youtube-embed"
+              name="youtubeIFrame"
+              width="100%"
+              height="315"
+              src={youtubeembed}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
 
           <div className="flex justify-center">
