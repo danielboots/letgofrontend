@@ -39,7 +39,7 @@ export default function Header() {
                   {/* <Link href="/service">
                     <a className="hover:text-indigo-800">Services</a>
                   </Link> */}
-                  <Link href="/post">
+                  <Link href="/Post">
                     <a className="hover:text-indigo-800">News</a>
                   </Link>
                   <Link href="/contact">
@@ -76,7 +76,7 @@ export default function Header() {
               {/* <Link href="/service">
                 <a>Services</a>
               </Link> */}
-              <Link href="/post">
+              <Link href="/Post">
                 <a>News</a>
               </Link>
               <Link href="/contact">
