@@ -16,21 +16,21 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
               }}
               className=" bg-center bg-cover bg-no-repeat m-auto bg-fixed relative h-40v flex justify-center items-center flex-col "
             >
-              <div className="absolute h-full w-full flex overflow-x-auto bg-coolgray-900 bg-opacity-50 backdrop-filter  "></div>
+              <div className="absolute h-full w-full flex overflow-x-auto  "></div>
               <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl ">
                 {name}
               </h1>
             </div>
           </div>
 
-          <article className="font-body  shadow-lg mx-auto ">
+          <article className="font-body    container mx-auto">
             <header className="">
-              <div className=" h-full w-full flex items-center justify-center p-8">
-                <div className="bg-white rounded p-6">
+              <div className=" h-full w-full flex items-center justify-center ">
+                <div className=" rounded p-1">
                   <h2 className="text-2xl mb-4 flex justify-center font-black  text-gray-700 tracking-tight uppercase">
                     {tagline}
                   </h2>
-                  <div className="prose  text-center my-10 p-2 ">
+                  <div className="prose  text-center my-10  ">
                     <div>
                       <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
                         Bio
@@ -44,11 +44,11 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
                     />
                   </div>
                   <div>
-                    <h2 className=" p-2 text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
+                    <h2 className="  text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
                       Spotify
                     </h2>
                   </div>
-                  <div className="p-2">
+                  <div className="">
                     <iframe
                       src={spotifyembed}
                       name="spotify"

@@ -22,7 +22,7 @@ const Event = ({ headline, name, youtubeembed, image, writeup, location }) => {
         </div>
       </div>
 
-      <div className="font-body  shadow-lg  bg-white container mx-auto ">
+      <div className="font-body    bg-white container mx-auto ">
         <div className="m-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
           <div className="">
             <h3 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
