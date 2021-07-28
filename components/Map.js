@@ -17,13 +17,13 @@ const Map = ({ location }) => {
     lng: location.lng,
   };
 
-  console.log(location.lat);
+  console.log(`map working and location lat for testing is: ${location.lat}`);
 
   const [map, setMap] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
+    // const bounds = new window.google.maps.LatLngBounds();
+    // map.fitBounds(bounds);
     setMap(map);
   }, []);
 
