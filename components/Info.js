@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <div className="relative bg-gray-800 font-body ">
+    <div className="relative bg-gray-900 font-body ">
       <div className="h-56  sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover "

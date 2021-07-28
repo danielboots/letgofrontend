@@ -1,6 +1,7 @@
 import { sanityClient, urlFor } from "../../sanity";
 import Layout from "@/components/Layout";
 import BlockContent from "@sanity/block-content-to-react";
+import Info from "@/components/Info";
 
 const Event = ({ headline, name, youtubeembed, image, writeup }) => {
   return (
@@ -47,6 +48,7 @@ const Event = ({ headline, name, youtubeembed, image, writeup }) => {
           </article>
         </main>
       </div>
+      <Info />
     </Layout>
   );
 };

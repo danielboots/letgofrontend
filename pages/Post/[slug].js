@@ -15,36 +15,43 @@ const Post = ({
     <Layout title="About | EDM" description="About| Let Go Records posts">
       <div>
         <main>
+          <div>
+            {/* Main container div */}
+            <div
+              style={{
+                backgroundImage: `url(${mainImage.asset.url})`,
+              }}
+              className=" bg-center bg-cover bg-no-repeat m-auto bg-fixed relative h-40v flex justify-center items-center flex-col "
+            >
+              <div className="absolute h-full w-full flex overflow-x-auto bg-coolgray-900 bg-opacity-50 backdrop-filter  "></div>
+              <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl ">
+                {title}
+              </h1>
+            </div>
+          </div>
+
           <article className="font-body  shadow-lg mx-auto ">
             <header className="">
-              <div className=" h-full w-full flex items-center justify-center p-8">
+              <div className=" h-full w-full flex items-center justify-center">
                 <div className="bg-white rounded p-6">
-                  <h1 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
-                    {title}
-                  </h1>
                   <div>
-                    <img
-                      className="w-full h-32 sm:h-48 object-cover  shadow-lg  hover:shadow-2xl transition duration-300 ease-in-out relative border-1"
-                      src={mainImage.asset.url}
-                      alt="alt tag"
-                    />
-                  </div>
-                  <div className="prose  text-center my-10 ">
-                    <BlockContent
-                      blocks={body}
-                      projectId="ta2muy7p"
-                      dataset="production"
-                    />
-                  </div>
-                  <div className=" p-4 justify-end  bg-gradient-to-r from-gray-900 ">
-                    <img
-                      className="w-16 h-16 object-cover"
-                      src={urlFor(author.image).url()}
-                      alt="alt tag"
-                    />
-                    <p className=" text-white">
-                      article by: <strong>{author.name}</strong>
-                    </p>
+                    <div className="prose text-justify leading-relaxed p-4  ">
+                      <BlockContent
+                        blocks={body}
+                        projectId="ta2muy7p"
+                        dataset="production"
+                      />
+                    </div>
+                    <div className=" p-4 justify-end  ">
+                      <img
+                        className="w-16 h-16 object-cover rounded-full"
+                        src={urlFor(author.image).url()}
+                        alt="alt tag"
+                      />
+                      <p className=" text-black">
+                        Article by: <strong>{author.name}</strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

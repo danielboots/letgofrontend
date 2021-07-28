@@ -1,6 +1,7 @@
 import { sanityClient, urlFor } from "../../sanity";
 import Layout from "@/components/Layout";
 import BlockContent from "@sanity/block-content-to-react";
+import Info from "@/components/Info";
 
 const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
   return (
@@ -26,22 +27,53 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
             <header className="">
               <div className=" h-full w-full flex items-center justify-center p-8">
                 <div className="bg-white rounded p-6">
-                  <h1 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
-                    {name}
-                  </h1>
-
-                  <div>
-                    <p className="text-justify">{name}</p>
-                    <p>{tagline}</p>
-                    <p>{spotifyembed}</p>
-                    <p>{youtubeembed}</p>
-                    <div className="prose  text-center my-10 ">
-                      <BlockContent
-                        blocks={bio}
-                        projectId="ta2muy7p"
-                        dataset="production"
-                      />
+                  <h2 className="text-2xl mb-4 flex justify-center font-black  text-gray-700 tracking-tight uppercase">
+                    {tagline}
+                  </h2>
+                  <div className="prose  text-center my-10 p-2 ">
+                    <div>
+                      <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
+                        Bio
+                      </h2>
                     </div>
+                    <BlockContent
+                      className="text-justify text-lg "
+                      blocks={bio}
+                      projectId="ta2muy7p"
+                      dataset="production"
+                    />
+                  </div>
+                  <div>
+                    <h2 className=" p-2 text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
+                      Spotify
+                    </h2>
+                  </div>
+                  <div className="p-2">
+                    <iframe
+                      src={spotifyembed}
+                      name="spotify"
+                      frameBorder="5"
+                      width="100%"
+                      height="300"
+                    ></iframe>
+                  </div>
+                  <div>
+                    <h2 className=" p-2 text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
+                      Media
+                    </h2>
+                  </div>
+
+                  <div className="p-2">
+                    <iframe
+                      id="youtube-embed"
+                      name="youtubeIFrame"
+                      width="100%"
+                      height="315"
+                      src={youtubeembed}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
                   </div>
                 </div>
               </div>
@@ -49,6 +81,7 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
           </article>
         </main>
       </div>
+      <Info />
     </Layout>
   );
 };

@@ -5,6 +5,8 @@ import Post from "@/components/Post";
 import Carousel from "@/components/Carousel";
 import Release from "@/components/Release";
 import Artist from "@/components/Artist";
+import Hero from "@/components/Hero";
+import Info from "@/components/Info";
 
 const Home = ({}) => {
   const [serviceData, setServiceData] = useState(null);
@@ -121,7 +123,7 @@ const Home = ({}) => {
   return (
     <Layout>
       <div className="font-body">
-        {/* <Hero /> */}
+        <Hero />
         <div className=" p-4 container mx-auto font-body py-4">
           <div className="mt-4  container mx-auto ">
             <h1 className="flex justify-left text-4xl font-lake  sm:text-4xl ">
@@ -176,6 +178,7 @@ const Home = ({}) => {
           </div>
         </div>
       </div>
+      <Info />
     </Layout>
   );
 };

@@ -1,6 +1,7 @@
 import { sanityClient, urlFor } from "../../sanity";
 import Layout from "@/components/Layout";
 // import BlockContent from "@sanity/block-content-to-react";
+import Info from "@/components/Info";
 
 const Single = ({
   headline,
@@ -45,6 +46,7 @@ const Single = ({
           </article>
         </main>
       </div>
+      <Info />
     </Layout>
   );
 };

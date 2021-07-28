@@ -26,24 +26,24 @@ export default function Header() {
 
               {/* hides content on small screens */}
               <div className="hidden sm:ml-6 sm:block">
-                <ul className="  uppercase space-x-8   font-bold tracking-widest text-gray-900  mr-6 font-body">
+                <ul className="  uppercase space-x-8   font-bold tracking-widest text-gray-500  mr-6 font-body">
                   <Link href="/release">
-                    <a className="hover:text-gray-800 ">Releases</a>
+                    <a className="hover:text-indigo-800 ">Releases</a>
                   </Link>
                   <Link href="/artist">
-                    <a className="hover:text-gray-800 ">Artists</a>
+                    <a className="hover:text-indigo-800 ">Artists</a>
                   </Link>
                   <Link href="/event">
-                    <a className="hover:text-gray-800 ">Events</a>
+                    <a className="hover:text-indigo-800 ">Events</a>
                   </Link>
-                  <Link href="/service">
-                    <a className="hover:text-gray-800">Services</a>
-                  </Link>
+                  {/* <Link href="/service">
+                    <a className="hover:text-indigo-800">Services</a>
+                  </Link> */}
                   <Link href="/post">
-                    <a className="hover:text-gray-800">News</a>
+                    <a className="hover:text-indigo-800">News</a>
                   </Link>
                   <Link href="/contact">
-                    <a className="hover:text-gray-800">Contact</a>
+                    <a className="hover:text-indigo-800">Contact</a>
                   </Link>
                 </ul>
               </div>
@@ -73,9 +73,9 @@ export default function Header() {
               <Link href="/event">
                 <a className="hover:text-gray-800 ">Events</a>
               </Link>
-              <Link href="/service">
+              {/* <Link href="/service">
                 <a>Services</a>
-              </Link>
+              </Link> */}
               <Link href="/post">
                 <a>News</a>
               </Link>

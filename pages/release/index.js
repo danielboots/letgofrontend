@@ -63,9 +63,6 @@ const index = ({ release }) => {
             <header className="">
               <div className=" h-full w-full flex items-center justify-center p-8">
                 <div className="bg-white rounded p-6">
-                  <h1 className=" font-lake text-6xl mb-8 flex justify-center   text-gray-800  uppercase">
-                    Releases
-                  </h1>
                   <div>
                     <div className=" m-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                       {releaseData &&
