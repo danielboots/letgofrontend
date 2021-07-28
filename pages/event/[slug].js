@@ -1,53 +1,50 @@
 import { sanityClient, urlFor } from "../../sanity";
 import Layout from "@/components/Layout";
-import BlockContent from "@sanity/block-content-to-react";
-import Info from "@/components/Info";
 
-const Event = ({ headline, name, youtubeembed, image, writeup }) => {
+import Info from "@/components/Info";
+import Map from "@/components/Map";
+
+const Event = ({ headline, name, youtubeembed, image, writeup, location }) => {
   return (
     <Layout title={`Event : ${name}`} description="Event| Let Go Records">
       <div>
-        <main>
-          <div>
-            {/* Main container div */}
-            <div
-              style={{
-                backgroundImage: `url(${image.asset.url})`,
-              }}
-              className=" bg-center bg-cover bg-no-repeat m-auto bg-fixed relative h-40v flex justify-center items-center flex-col "
-            >
-              <div className="absolute h-full w-full flex overflow-x-auto bg-coolgray-900 bg-opacity-50 backdrop-filter  "></div>
-              <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl "></h1>
-            </div>
-          </div>
-
-          <article className="font-body  shadow-lg mx-auto ">
-            <header className="">
-              <div className=" h-full w-full flex items-center justify-center p-8">
-                <div className="bg-white rounded p-6">
-                  <h1 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
-                    {name}
-                  </h1>
-
-                  <div>
-                    <p className="text-justify">{name}</p>
-                    <p>{headline}</p>
-
-                    <p>{youtubeembed}</p>
-                    <div className="prose  text-center my-10 ">
-                      <BlockContent
-                        blocks={writeup}
-                        projectId="ta2muy7p"
-                        dataset="production"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </header>
-          </article>
-        </main>
+        {/* Main container div */}
+        <div
+          style={{
+            backgroundImage: `url(${image.asset.url})`,
+          }}
+          className=" bg-center bg-cover bg-no-repeat m-auto bg-fixed relative h-40v flex justify-center items-center flex-col "
+        >
+          <div className="absolute h-full w-full flex overflow-x-auto bg-coolgray-900 bg-opacity-50 backdrop-filter  "></div>
+          <h1 className=" text-white z-20 uppercase font-body text-center font-bold  tracking-wider text-3xl  sm:text-4xl md:text-6xl ">
+            {name}
+          </h1>
+        </div>
       </div>
+
+      <div className="font-body  shadow-lg  bg-white container mx-auto ">
+        <div className="m-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          <div className="">
+            <h3 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
+              Event Details
+            </h3>
+            <h1 className="text-4xl mb-4 flex justify-center   text-gray-700 tracking-tight uppercase">
+              {name}
+            </h1>
+
+            <p className="text-justify">{name}</p>
+            <p>{headline}</p>
+            <p>{writeup}</p>
+          </div>
+          <div className="">
+            <h3 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
+              Location
+            </h3>
+            <Map location={location} />
+          </div>
+        </div>
+      </div>
+
       <Info />
     </Layout>
   );
@@ -59,6 +56,8 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = `*[_type == 'event' && slug.current == $pageSlug][0]{
     headline,
+    writeup,
+    location,
     name,
     slug,
     eventdate,
@@ -85,9 +84,9 @@ export const getServerSideProps = async (pageContext) => {
     return {
       props: {
         name: event.name,
-
+        writeup: event.writeup,
         headline: event.headline,
-
+        location: event.location,
         youtubeembed: event.youtubeembed,
         image: event.image,
       },
