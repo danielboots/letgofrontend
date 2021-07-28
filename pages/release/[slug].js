@@ -49,7 +49,7 @@ const Single = ({
             </h2>
             <p className="font-bold py-2">Released on: {releasedate}</p>
 
-            <p>{writeup}</p>
+            <p className="leading-relaxed text-lg">{writeup}</p>
           </div>
           <div className="mb-4">
             <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
@@ -79,13 +79,13 @@ const Single = ({
               ></iframe>
             </div>
           </div>
-          <div className="mb-4">
-            <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
-              Buy
-            </h2>
-          </div>
 
-          <p>{beatport}</p>
+          <div className="flex justify-center">
+            <a href={beatport} target="_blank">
+              <img src="/images/beatport.png" className="h-40 w-40" alt="" />
+            </a>
+          </div>
+          <p></p>
         </div>
       </article>
 

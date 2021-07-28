@@ -15,12 +15,7 @@ const Release = ({ release }) => {
             src={release.image.asset.url}
             alt="meh"
           />
-          <div className="m-4 text-center">
-            <span className=" text-gray-600 ">{release.writeup}</span>
-            <span>{release.spotifyembed}</span> <br />
-            <span>{release.youtubeembed}</span> <br />
-            <span>{release.beatport}</span>
-          </div>
+          <div className="m-4 text-center"></div>
 
           <Link href={`release/${release.slug.current}`}>
             <button
