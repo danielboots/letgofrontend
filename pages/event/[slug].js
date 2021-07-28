@@ -36,7 +36,7 @@ const Event = ({ headline, name, youtubeembed, image, writeup, location }) => {
             <p>{headline}</p>
             <p>{writeup}</p>
           </div>
-          <div className="">
+          <div className="p4 mb-10">
             <h3 className="text-4xl mb-4 flex justify-center font-black  text-gray-900 tracking-tight uppercase">
               Location
             </h3>
