@@ -47,7 +47,7 @@ const contact = () => {
                       className="flex-shrink-0 h-6 w-6 text-gray-400"
                       aria-hidden="true"
                     />
-                    <span className="ml-3">contact@letgo.com</span>
+                    <span className="ml-3"> vince@letgorecordings.com</span>
                   </dd>
                 </div>
               </dl>
@@ -56,7 +56,7 @@ const contact = () => {
           <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
             <div className="max-w-lg mx-auto lg:max-w-none">
               <form
-                action="https://formsubmit.co/dan@vuhze.com"
+                action="https://formsubmit.co/vince@letgorecordings.com"
                 method="POST"
                 className="grid grid-cols-1 gap-y-6"
               >
