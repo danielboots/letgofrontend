@@ -1,8 +1,9 @@
 .herohome {
-  background: url("/images/hero.webp") no-repeat center center fixed;
+  /* background: url("/images/hero.webp") no-repeat center center fixed; */
+  background-color: black;
   background-size: cover;
   margin: auto;
-  height: 45vh;
+  height: 10vh;
   background-attachment: fixed;
   color: #ffffff;
   position: relative;
@@ -10,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .herohome::before {
@@ -25,10 +26,11 @@
 
 @media (max-width: 960px) {
   .herohome {
-    background: url("/images/hero.webp") no-repeat center center fixed;
+    background-color: black;
+    /* background: url("/images/hero.webp") no-repeat center center fixed; */
     background-size: cover;
     margin: auto;
-    height: 40vh;
+    height: 10vh;
     background-attachment: fixed;
     color: #ffffff;
     position: relative;

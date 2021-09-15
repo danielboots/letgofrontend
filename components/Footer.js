@@ -90,7 +90,7 @@ export default function Example() {
         </div>
 
         <p className="mt-4 text-center text-xs font-bold text-gray-200 uppercase tracking-widest ">
-          Web Dev By: <a href="https://vuhze.com">VUHZE Tech</a>
+          Web Dev By: <a href="https://www.edmmusicservice.com/">VUHZE Tech</a>
         </p>
       </div>
     </footer>
