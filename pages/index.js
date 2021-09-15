@@ -178,7 +178,7 @@ const Home = ({}) => {
           </div>
         </div>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

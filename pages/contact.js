@@ -47,7 +47,7 @@ const contact = () => {
                       className="flex-shrink-0 h-6 w-6 text-gray-400"
                       aria-hidden="true"
                     />
-                    <span className="ml-3"> vince@letgorecordings.com</span>
+                    <span className="ml-3"> contact@letgorecordings.com</span>
                   </dd>
                 </div>
               </dl>
@@ -56,7 +56,7 @@ const contact = () => {
           <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
             <div className="max-w-lg mx-auto lg:max-w-none">
               <form
-                action="https://formsubmit.co/vince@letgorecordings.com"
+                action="https://formsubmit.co/contact@letgorecordings.com"
                 method="POST"
                 className="grid grid-cols-1 gap-y-6"
               >
@@ -114,7 +114,7 @@ const contact = () => {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label
                     htmlFor="service"
                     className="sr-only"
@@ -138,12 +138,10 @@ const contact = () => {
                     <option>Vocal Production</option>
                     <option>Other Enquiries</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div>
-                  <label htmlFor="message" className="sr-only">
-                    Message
-                  </label>
+                  <label htmlFor="message" className="sr-only"></label>
                   <textarea
                     id="message"
                     name="message"
@@ -167,7 +165,7 @@ const contact = () => {
           </div>
         </div>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

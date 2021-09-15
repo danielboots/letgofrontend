@@ -51,7 +51,7 @@ const Single = ({
 
             <p className="leading-relaxed text-lg">{writeup}</p>
           </div>
-          <div className="p-2">
+          {/* <div className="p-2">
             <h2 className="text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
               Media
             </h2>
@@ -64,9 +64,9 @@ const Single = ({
               width="100%"
               height="300"
             ></iframe>
-          </div>
+          </div> */}
 
-          <div className="p-2">
+          {/* <div className="p-2">
             <iframe
               id="youtube-embed"
               name="youtubeIFrame"
@@ -77,11 +77,11 @@ const Single = ({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
 
           <div className="flex justify-center">
             <a
-              className=" bg-black text-3xl  text-white font-bold px-10 py-6 rounded-lg m-6"
+              className=" bg-black text-xl uppercase text-white font-bold px-10 py-6 rounded-lg m-6"
               href={beatport}
               target="_blank"
             >
@@ -92,7 +92,7 @@ const Single = ({
         </div>
       </article>
 
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

@@ -48,7 +48,7 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
                       Spotify
                     </h2>
                   </div>
-                  <div className="">
+                  <div className="pb-6">
                     <iframe
                       src={spotifyembed}
                       name="spotify"
@@ -57,13 +57,13 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
                       height="300"
                     ></iframe>
                   </div>
-                  <div>
+                  {/* <div>
                     <h2 className=" p-2 text-2xl mb-4 flex text-left font-black  text-gray-700 tracking-tight uppercase">
                       Media
                     </h2>
-                  </div>
+                  </div> */}
 
-                  <div className="p-2">
+                  {/* <div className="p-2">
                     <iframe
                       id="youtube-embed"
                       name="youtubeIFrame"
@@ -74,14 +74,14 @@ const Artist = ({ tagline, name, youtubeembed, spotifyembed, image, bio }) => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </header>
           </article>
         </main>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };

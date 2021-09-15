@@ -56,7 +56,7 @@ const post = ({ post }) => {
             ))}
         </div>
       </div>
-      <Info />
+      {/* <Info /> */}
     </Layout>
   );
 };
