@@ -80,8 +80,12 @@ const Single = ({
           </div>
 
           <div className="flex justify-center">
-            <a href={beatport} target="_blank">
-              <img src="/images/beatport.png" className="h-40 w-40" alt="" />
+            <a
+              className=" bg-black text-3xl  text-white font-bold px-10 py-6 rounded-lg m-6"
+              href={beatport}
+              target="_blank"
+            >
+              buy
             </a>
           </div>
           <p></p>
